@@ -96,4 +96,11 @@ class MinesweeperApplicationTests {
 		assertTrue(board.isWon());
 	}
 
+	@Test
+	void testPrint() {
+		board.initialize(4, 2);
+		board.reveal(0, 0);
+		board.print();
+	}
+
 }

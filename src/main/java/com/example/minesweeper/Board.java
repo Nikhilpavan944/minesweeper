@@ -5,7 +5,6 @@ import java.util.logging.Logger;
 
 public class Board {
 
-    private static final Logger logger = Logger.getLogger(Board.class.getName());
     private static final char MINE = '*';
     private static final char COVERED = '_';
     private static final char EMPTY = '0';
@@ -57,7 +56,6 @@ public class Board {
                 placedMines++;
             }
         }
-        logger.info("Mines placed on the board.");
     }
 
     /**
@@ -78,7 +76,6 @@ public class Board {
                 board[i][j] = (char) ('0' + mineCount);
             }
         }
-        logger.info("Numbers calculated for each cell.");
     }
 
     /**
@@ -94,7 +91,6 @@ public class Board {
                 reveal(x + DX[k], y + DY[k]);
             }
         }
-        logger.info("Cell revealed at (" + x + ", " + y + ").");
     }
 
     /**
